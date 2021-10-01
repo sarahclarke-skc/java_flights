@@ -21,4 +21,10 @@ public class PersonTest {
         assertEquals("Katya Weigand", person.getName());
     }
 
+    @Test
+    public void objectRemembersItsType() {
+        person = new Pilot("Tom Weigand", Rank.CAPTAIN, "12345");
+        Pilot pilot = (Pilot) person;
+        assertEquals("12345", pilot.getLicenceNumber());
+    }
 }
