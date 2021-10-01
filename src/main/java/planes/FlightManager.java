@@ -8,9 +8,13 @@ public class FlightManager {
         this.flight = flight;
     }
 
-    public double getPersonalBaggageAllowance() {
+    public double getPersonalBaggageAllowance(Flight flight) {
         double totalWeightCapacity = flight.getPlaneType().getWeight();
         int totalPassengerCapacity = flight.getPlaneType().getSeatCapacity();
         return totalWeightCapacity / totalPassengerCapacity;
+    }
+
+    public double calculateTotalBaggageWeightOnFlight(Flight flight) {
+        return flight.getPassengers().size() * getPersonalBaggageAllowance(flight);
     }
 }
