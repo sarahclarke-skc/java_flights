@@ -55,4 +55,13 @@ public class FlightManagerTest {
 
 //    calculate how much overall weight reserved for baggage remains for a flight
 
+    @Test
+    public void canCalculateRemainingBaggageWeight() {
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        double result = flightManager.calculateRemainingBaggageWeight();
+        assertEquals(75, result, 0.001);
+        }
+
 }

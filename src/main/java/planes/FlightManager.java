@@ -17,4 +17,8 @@ public class FlightManager {
     public double calculateTotalBaggageWeightOnFlight(Flight flight) {
         return flight.getPassengers().size() * getPersonalBaggageAllowance(flight);
     }
+
+    public double calculateRemainingBaggageWeight() {
+        return flight.getPlaneType().getWeight() - calculateTotalBaggageWeightOnFlight(flight);
+    }
 }
