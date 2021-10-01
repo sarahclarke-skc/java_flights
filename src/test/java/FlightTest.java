@@ -118,6 +118,14 @@ public class FlightTest {
         assertEquals(4, flight.getPassengers().size());
     }
 
+    @Test
+    public void canGetTotalNumberOfBagsAfterBooking() {
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        assertEquals(9, flight.getTotalBags());
+    }
+
 
 
 }

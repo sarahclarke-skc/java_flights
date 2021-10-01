@@ -2,7 +2,6 @@ import person.CabinCrewMember;
 import person.Passenger;
 import person.Pilot;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Flight {
@@ -15,6 +14,7 @@ public class Flight {
     private ArrayList<Pilot> pilots;
     private ArrayList<CabinCrewMember> cabinCrewMembers;
     private ArrayList<Passenger> passengers;
+    private int totalBags;
 
     public Flight(PlaneType planeType, String flightNumber, String destinationAirport, String arrivalAirport, String departureTime) {
         this.planeType = planeType;
@@ -25,6 +25,7 @@ public class Flight {
         this.pilots = new ArrayList<>();
         this.cabinCrewMembers = new ArrayList<>();
         this.passengers = new ArrayList<>();
+        this.totalBags = 0;
     }
 
     public PlaneType getPlaneType() {
@@ -78,6 +79,11 @@ public class Flight {
     public void bookPassengerOnFlight(Passenger passenger) {
         if(this.findEmptySeats() > 0) {
             passengers.add(passenger);
+            this.totalBags += passenger.getNumberOfBags();
         }
+    }
+
+    public int getTotalBags() {
+        return totalBags;
     }
 }

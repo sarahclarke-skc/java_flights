@@ -20,6 +20,12 @@ public class PilotTest {
     }
 
     @Test
+    public void canChangeRank(){
+        pilot.setRank(Rank.FIRST_OFFICER);
+        assertEquals(Rank.FIRST_OFFICER, pilot.getRank());
+    }
+
+    @Test
     public void canFlyPlane() {
         assertEquals("I am king of the skies!", pilot.flyPlane());
     }
