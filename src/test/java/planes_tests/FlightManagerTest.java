@@ -37,13 +37,15 @@ public class FlightManagerTest {
     }
 
 //    calculate how much baggage weight should be reserved for each passenger for a flight
-
+// my maths is terrible - is that even how you'd do this?
     @Test
     public void canCalculateBaggageWeightPerPassenger() {
-        flightManager.calculateBaggageWeightPerPassenger();
-        assertEquals();
+        double result = flightManager.getPersonalBaggageAllowance();
+        assertEquals(75, result, 0.001);
     }
 //    calculate how much baggage weight is booked by passengers of a flight
+    
+
 //    calculate how much overall weight reserved for baggage remains for a flight
 
 }
