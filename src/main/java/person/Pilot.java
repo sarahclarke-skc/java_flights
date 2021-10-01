@@ -18,4 +18,8 @@ public class Pilot extends Person {
    public Rank getRank() {
         return rank;
    }
+
+    public String flyPlane() {
+        return "I am king of the skies!";
+    }
 }
