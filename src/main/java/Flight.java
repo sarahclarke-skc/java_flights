@@ -47,15 +47,31 @@ public class Flight {
         return departureTime;
     }
 
+    public void addPilot(Pilot pilot) {
+        this.pilots.add(pilot);
+    }
+
     public ArrayList<Pilot> getPilots() {
         return pilots;
+    }
+
+    public void addCabinCrewMember(CabinCrewMember cabinCrewMember) {
+        this.cabinCrewMembers.add(cabinCrewMember);
     }
 
     public ArrayList<CabinCrewMember> getCabinCrewMembers() {
         return cabinCrewMembers;
     }
 
-    public ArrayList<Passenger> getPassengers() {
+    public void addPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
+
+    public ArrayList<Passenger> getPassengers(){
         return passengers;
+    }
+
+    public int findEmptySeats() {
+        return planeType.getSeatCapacity() - passengers.size();
     }
 }
