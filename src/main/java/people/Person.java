@@ -1,4 +1,4 @@
-package person;
+package people;
 
 public abstract class Person {
 

@@ -1,9 +1,13 @@
+package planes_tests;
+
 import org.junit.Before;
 import org.junit.Test;
-import person.CabinCrewMember;
-import person.Passenger;
-import person.Pilot;
-import person.Rank;
+import people.CabinCrewMember;
+import people.Passenger;
+import people.Pilot;
+import people.Rank;
+import planes.Flight;
+import planes.PlaneType;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,4 +1,4 @@
-package person;
+package people;
 
 import org.junit.Before;
 import org.junit.Test;

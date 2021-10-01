@@ -1,3 +1,5 @@
+package planes;
+
 public enum PlaneType {
 
     BOEING747(10, 200),

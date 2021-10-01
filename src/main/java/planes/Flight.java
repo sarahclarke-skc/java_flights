@@ -1,6 +1,8 @@
-import person.CabinCrewMember;
-import person.Passenger;
-import person.Pilot;
+package planes;
+
+import people.CabinCrewMember;
+import people.Passenger;
+import people.Pilot;
 
 import java.util.ArrayList;
 
