@@ -74,4 +74,10 @@ public class Flight {
     public int findEmptySeats() {
         return planeType.getSeatCapacity() - passengers.size();
     }
+
+    public void bookPassengerOnFlight(Passenger passenger) {
+        if(this.findEmptySeats() > 0) {
+            passengers.add(passenger);
+        }
+    }
 }

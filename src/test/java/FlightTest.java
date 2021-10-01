@@ -101,6 +101,23 @@ public class FlightTest {
         assertEquals(1, flight.findEmptySeats());
     }
 
+    @Test
+    public void canBookPassengersOnFlight() {
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        assertEquals(2, flight.getPassengers().size());
+    }
+
+    @Test
+    public void cannotBookPassengersOnFlight() {
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        flight.bookPassengerOnFlight(passenger);
+        assertEquals(4, flight.getPassengers().size());
+    }
+
 
 
 }
